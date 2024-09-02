@@ -1,5 +1,5 @@
 {% set name = "aiidalab-widgets-base" %}
-{% set version = "2.3.0a1" %}
+{% set version = "2.3.0a2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aiidalab_widgets_base-{{ version }}.tar.gz
-  sha256: 4a6d3c7218925cf73d14e9872a9501100519181f616e88fcc246fc519a26cb57
+  sha256: 82188ca9fbed06ac4e1928024da3da6d9be39424ad26b10cec55846d1fc1ed13
 
 build:
   noarch: python
@@ -32,7 +32,7 @@ requirements:
     - bokeh >=2.0,<3.dev0
     - humanfriendly >=10.0,<11.dev0
     - ipytree >=0.2,<1.dev0
-    - traitlets >=5.9,<6.dev0
+    - traitlets >=5.4,<6.dev0
     - ipywidgets >=7.7,<8.dev0
     - widgetsnbextension <3.6.3
     - pymysql >=0.9,<1.dev0
