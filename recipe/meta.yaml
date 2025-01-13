@@ -1,5 +1,7 @@
 {% set name = "aiidalab-widgets-base" %}
 {% set version = "2.3.0a2" %}
+{% set python_min = "3.9" %}
+{% set sha256 = "82188ca9fbed06ac4e1928024da3da6d9be39424ad26b10cec55846d1fc1ed13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/aiidalab_widgets_base-{{ version }}.tar.gz
-  sha256: 82188ca9fbed06ac4e1928024da3da6d9be39424ad26b10cec55846d1fc1ed13
+  sha256: {{ sha256 }}
 
 build:
   noarch: python
