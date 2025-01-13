@@ -1,29 +1,31 @@
 {% set name = "aiidalab-widgets-base" %}
 {% set version = "2.3.0a2" %}
+{% set python_min = "3.9" %}
+{% set sha256 = "82188ca9fbed06ac4e1928024da3da6d9be39424ad26b10cec55846d1fc1ed13" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aiidalab_widgets_base-{{ version }}.tar.gz
-  sha256: 82188ca9fbed06ac4e1928024da3da6d9be39424ad26b10cec55846d1fc1ed13
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/aiidalab_widgets_base-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
   noarch: python
   # We can only support linux because of 'povray' dependency
   # https://github.com/conda-forge/povray-feedstock/blob/a0b75ca48b7767ba4f5b4bb0c5ff2d4a15b85f71/recipe/meta.yaml#L14
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=42
     - wheel
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - pycifrw >=4.4,<5.dev0
     - aiida-core >=2.1,<3
     - aiidalab >=21.11.2
@@ -48,6 +50,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/aiidalab/aiidalab-widgets-base
