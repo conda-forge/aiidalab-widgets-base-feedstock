@@ -1,7 +1,7 @@
 {% set name = "aiidalab-widgets-base" %}
-{% set version = "2.3.0a2" %}
+{% set version = "2.3.0a3" %}
 {% set python_min = "3.9" %}
-{% set sha256 = "82188ca9fbed06ac4e1928024da3da6d9be39424ad26b10cec55846d1fc1ed13" %}
+{% set sha256 = "35ba7594a0aedb723b5f099ae40760196795da8af87fb3583942c7d470fcbcd9" %}
 
 package:
   name: {{ name|lower }}
@@ -16,7 +16,7 @@ build:
   # We can only support linux because of 'povray' dependency
   # https://github.com/conda-forge/povray-feedstock/blob/a0b75ca48b7767ba4f5b4bb0c5ff2d4a15b85f71/recipe/meta.yaml#L14
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
