@@ -1,7 +1,7 @@
 {% set name = "aiidalab-widgets-base" %}
-{% set version = "2.3.0" %}
+{% set version = "2.3.1" %}
 {% set python_min = "3.9" %}
-{% set sha256 = "91c6821e3714dc70e92282f242d374a34d6f849f8938481b397050ef38e992ed" %}
+{% set sha256 = "9767fb9f74abce7a2af3fb241bd972ca9bfdfef492929e9ae7fc0b1d1661a2ca" %}
 
 package:
   name: {{ name|lower }}
