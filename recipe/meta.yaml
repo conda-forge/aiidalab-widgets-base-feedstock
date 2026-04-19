@@ -1,7 +1,7 @@
 {% set name = "aiidalab-widgets-base" %}
-{% set version = "2.5.0" %}
+{% set version = "3.0.0a0" %}
 {% set python_min = "3.9" %}
-{% set sha256 = "73c449a28492881ac9b9ff697194ad77cc045e882136385029e62234298cb0a7" %}
+{% set sha256 = "2ef5ca47d425eeb81d8eaa112eee7cbd52ba071f25194b08bdc1d05fe522c886" %}
 
 package:
   name: {{ name|lower }}
@@ -27,21 +27,21 @@ requirements:
   run:
     - python >={{ python_min }}
     - pycifrw >=4.4,<5.dev0
-    - aiida-core >=2.2,<3
+    - aiida-core >=2.7,<3.dev0
     - aiidalab >=21.11.2
-    - ansi2html >=1.6,<2.dev0
+    - ansi2html >=1.7,<2.dev0
     - ase >=3.18,<4.dev0
     - bokeh >=2.4,<3.dev0
+    - numpy >=1.26,<2.dev0
     - humanfriendly >=10.0,<11.dev0
     - ipytree >=0.2,<1.dev0
     - traitlets >=5.4,<6.dev0
-    - ipywidgets >=7.7,<8.dev0
-    - widgetsnbextension <3.6.3
+    - ipywidgets >=8.1,<9.dev0
     - pymysql >=0.9,<1.dev0
-    - nglview >=3.0,<4.dev0
+    - nglview >=3.0.8,<4.dev0
     - spglib >=1.14,<3
     - vapory >=0.1.2,<0.2.dev0
-    - pandas >=2.1,<3.dev0
+    - pandas >=2.2,<3.dev0
     - ipython >=7.33,<9.0.dev0
 
 test:
