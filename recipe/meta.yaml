@@ -47,8 +47,10 @@ requirements:
 test:
   imports:
     - aiidalab_widgets_base
-  commands:
-    - pip check
+  # TODO: Re-enable pip check once we bump nglview version to 4.0
+  # nglview=3.1.4 had bad metadata so pip check fails
+  #commands:
+  #  - pip check
   requires:
     - pip
     - python {{ python_min }}
