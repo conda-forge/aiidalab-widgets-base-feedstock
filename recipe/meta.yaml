@@ -1,7 +1,7 @@
 {% set name = "aiidalab-widgets-base" %}
-{% set version = "3.0.0a0" %}
+{% set version = "3.0.0a1" %}
 {% set python_min = "3.12" %}
-{% set sha256 = "2ef5ca47d425eeb81d8eaa112eee7cbd52ba071f25194b08bdc1d05fe522c886" %}
+{% set sha256 = "1ef3986639aa0172e5fec38ebcdbb8813ae9ed74a006719cb1391fba43487ad3" %}
 
 package:
   name: {{ name|lower }}
@@ -38,7 +38,7 @@ requirements:
     - traitlets >=5.4,<6.dev0
     - ipywidgets >=8.1,<9.dev0
     - pymysql >=0.9,<1.dev0
-    - nglview >=3.0.8,<4.dev0
+    - nglview >=3.0.8,<5.dev0
     - spglib >=1.14,<3
     - vapory >=0.1.2,<0.2.dev0
     - pandas >=2.2,<3.dev0
