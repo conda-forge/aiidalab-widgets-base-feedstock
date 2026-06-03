@@ -1,7 +1,7 @@
 {% set name = "aiidalab-widgets-base" %}
-{% set version = "3.0.0a1" %}
+{% set version = "3.0.0a2" %}
 {% set python_min = "3.12" %}
-{% set sha256 = "1ef3986639aa0172e5fec38ebcdbb8813ae9ed74a006719cb1391fba43487ad3" %}
+{% set sha256 = "cbd95a368cf4508ba0e7fab69394337548208d0ac201b503c0663788303baa94" %}
 
 package:
   name: {{ name|lower }}
@@ -41,16 +41,13 @@ requirements:
     - nglview >=3.0.8,<5.dev0
     - spglib >=1.14,<3
     - vapory >=0.1.2,<0.2.dev0
-    - pandas >=2.2,<3.dev0
     - ipython >=7.33,<9.0.dev0
 
 test:
   imports:
     - aiidalab_widgets_base
-  # TODO: Re-enable pip check once we bump nglview version to 4.0
-  # nglview=3.1.4 had bad metadata so pip check fails
-  #commands:
-  #  - pip check
+  commands:
+    - pip check
   requires:
     - pip
     - python {{ python_min }}
