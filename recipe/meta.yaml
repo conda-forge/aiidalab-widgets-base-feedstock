@@ -1,7 +1,7 @@
 {% set name = "aiidalab-widgets-base" %}
-{% set version = "3.0.0a2" %}
+{% set version = "3.0.0a3" %}
 {% set python_min = "3.12" %}
-{% set sha256 = "cbd95a368cf4508ba0e7fab69394337548208d0ac201b503c0663788303baa94" %}
+{% set sha256 = "05d2830f78e426c887fef5f6e8a52f6a45bab5b1c7a1fa79aa15c55f8632e890" %}
 
 package:
   name: {{ name|lower }}
@@ -28,11 +28,8 @@ requirements:
     - python >={{ python_min }}
     - pycifrw >=4.4,<5.dev0
     - aiida-core >=2.7,<3.dev0
-    - aiidalab >=21.11.2
     - ansi2html >=1.7,<2.dev0
     - ase >=3.18,<4.dev0
-    - bokeh >=2.4,<3.dev0
-    - numpy >=1.26,<2.dev0
     - humanfriendly >=10.0,<11.dev0
     - ipytree >=0.2,<1.dev0
     - traitlets >=5.4,<6.dev0
@@ -42,6 +39,7 @@ requirements:
     - spglib >=1.14,<3
     - vapory >=0.1.2,<0.2.dev0
     - ipython >=7.33,<9.0.dev0
+    - pip >=25.0
 
 test:
   imports:
